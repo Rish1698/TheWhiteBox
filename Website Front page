@@ -1,0 +1,659 @@
+<html>
+<head>
+  <title>White Box</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url("bg.gif");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("HP.jpg");
+  min-height: 500px;
+}
+
+.bgimg-3 {
+  background-image: url("LM.jpg");
+  min-height: 500px;
+}
+
+.bgimg-4 {
+  background-image: url("ES.jpg");
+  min-height: 500px;
+
+}.bgimg-5 {
+  background-image: url("bg.gif");
+  min-height: 100%;
+}
+
+.a{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  text-align:center;
+  padding:20px 80px;
+  text-align: justify;
+  transition: 0.5s;
+  color: white;
+  background-color: black;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+.a:hover{
+	color: black;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  background-color:white;
+}
+
+.b{color:white;
+  background-color: black;
+  font-family:Comic Sans MS;
+  font-size: 20px;
+  height: 500px;
+  padding: 50px 40px 50px 40px;
+  text-align: justify;
+  transition: 0.5s;
+  opacity: 0.9;
+  }
+
+.b:hover{
+	opacity: 1;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+.b img{
+	top: 0px;
+	left: 0px;
+	margin-right: 30px;
+}
+
+.b a{
+	float: right;
+    margin-right: 20px;
+	margin-top: 130px;
+	padding: 0px 20px 5px 20px;
+	color: white;
+	transition: 0.5s;
+  border:2px solid white;
+}
+
+.b a:hover{
+	background-color: white;
+	color: black;
+}
+
+.head{
+  background-color: black;
+  border-bottom: 1px solid black;
+  top: 0px;
+  text-align: center;
+  opacity: 0.5;
+  color: white;
+  font-size: 29px;
+  font-family: Comic Sans MS;
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  z-index: 1;
+  transition:0.7s;
+}
+
+.head:hover{
+	opacity:1;
+	background-color: black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-bottom: 4px solid white;
+}
+
+.head img{
+  background-color:black;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.head img:hover {
+  opacity: 1;
+  background-color:grey;
+}
+
+.sidenav {
+    height: 100%;
+  background-image: url("nav.gif");
+    width: 0;
+    position: fixed;
+    opacity: 0.4;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.7s;
+}
+
+.login {
+    height: 100%;
+    width: 0;
+    color: black;
+    font-weight: bold;
+    position: fixed;
+    opacity: 1;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 1s;
+    background-image: url("sdfghj.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1000px;
+}
+
+.login .closebtn {
+    position: absolute;
+    top: 0px;
+    color: white;
+    right: 15px;
+    text-decoration: none;
+    font-size: 50px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.login .closebtn:hover {
+    background-color: grey;
+    color: black;
+}
+
+.cat .closebtn {
+  float: right;
+  top: 30px;
+  color: white;
+    position: absolute;
+    right: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3px 10px 0px 10px;
+    font-size: 40px;
+    transition: 0.3s;
+}
+
+.cat .closebtn:hover {
+   background-color: grey;
+   color: black;
+}
+
+.sidenav:hover{
+	opacity: 1;
+}
+
+.sidenav a {
+    padding: 10px 8px 10px 70px;
+    font-size: 27px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: 0.5s;
+}
+
+.sidenav a:hover{
+    background-color: white;
+    color: black;
+}
+
+.sidenav .c a{
+    color: black;
+    background-color: grey;
+}
+
+.sidenav img{
+  opacity: 0.5;
+  transition: 0.4s;
+}
+
+.sidenav img:hover{
+  opacity: 1;
+  background-color: grey;
+}
+
+.login img{
+	border: 3px solid white;
+	transition: 0.5s;
+  border-radius: 10px;
+}
+
+.login img:hover{
+  background-color: white;
+	}
+
+.button{
+  padding: 10px;
+  width: 70px;
+  color: black;
+  font-size: 20px;
+  background-color:white;
+  border-radius: 5px;
+  border: 3px solid white;
+  transition: 0.3s;
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+  border: 3px solid white;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.caption a{
+  color: white;
+  text-decoration:none;
+}
+
+.caption a:hover{
+  color: black;
+}
+
+.caption span.border {
+  background-color: none;
+  color: white;
+  border:3px solid white;
+  padding: 15px 18px 18px 18px;
+  font-size: 25px;
+  transition: 0.7s;
+  opacity: 0.6;
+}
+
+.caption span.border:hover{
+  background-color: white;
+  color: black;
+  opacity: 1;
+}
+
+.cat{
+  position: absolute;
+  width: 0;
+  left: 0;
+  top: 165px;
+  transition: 0.7s;
+}
+
+.cat p{
+  background-color: black;
+  height: 60px;
+  border-top: 15px solid black;
+}
+
+.cat .block{
+float: left;
+opacity: 0;
+  background-color: black;
+  color: white;
+border:2px solid white;
+  margin-top: 5px;
+  margin-left:35px;
+    width: 170px;
+    text-align: center;
+    font-family: Comic Sans MS, cursive, sans-serif;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.cat .block:hover{
+background-color: white;
+color: black;
+}
+
+.heading{
+  position: absolute;
+  width: 61%;
+  left: 0;
+  top: 500px;
+  text-align: right;
+  transition: 1s;
+}
+
+.heading2{
+  position: absolute;
+  width: 0;
+  left: 0;
+  top: 500px;
+  opacity: 0;
+  text-align: right;
+  transition: 0.7s;
+}
+
+.heading p{
+  background-color: black;
+  color: white;
+  height: 60px;
+  border-top: 15px solid black;
+  font-size: 35px;
+  letter-spacing: 5px;
+  transition: 0.3s;
+}
+
+.heading2 p{
+  background-color: black;
+  color: white;
+  height: 60px;
+  border-top: 15px solid black;
+  font-size: 35px;
+  letter-spacing: 5px;
+  transition: 0.3s;
+}
+
+.heading p:hover{
+  background-color: white;
+  color: black;
+  height: 60px;
+  border-top: 15px solid white;
+  font-size: 35px;
+}
+
+.heading2 p:hover{
+  background-color: white;
+  color: black;
+  height: 60px;
+  border-top: 15px solid white;
+  font-size: 35px;
+}
+</style>
+<script>
+function head2open() {
+  document.getElementById("myHead").style.width = "0";
+  document.getElementById("myHead2").style.width = "61%";
+  document.getElementById("myHead2").style.opacity = "1";
+  document.getElementById("myHead").style.opacity = "0";
+}
+
+function head2close() {
+  document.getElementById("myHead2").style.width = "0";
+  document.getElementById("myHead").style.width = "61%";
+  document.getElementById("myHead2").style.opacity = "0";
+  document.getElementById("myHead").style.opacity = "1";
+}
+
+function CatOpen() {
+  document.getElementById("Cat").style.width = "100%";
+  document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("myHead").style.width = "61%";
+  document.getElementById("blck").style.opacity = "1";
+  document.getElementById("b").style.opacity = "1";
+  document.getElementById("c").style.opacity = "1";
+  document.getElementById("d").style.opacity = "1";
+  document.getElementById("e").style.opacity = "1";
+  document.getElementById("f").style.opacity = "1";
+  document.getElementById("myHead").style.opacity = "1";
+}
+
+function CatClose() {
+   document.getElementById("Cat").style.width = "0px";
+   document.getElementById("b").style.opacity = "0";
+   document.getElementById("c").style.opacity = "0";
+   document.getElementById("d").style.opacity = "0";
+   document.getElementById("e").style.opacity = "0";
+   document.getElementById("f").style.opacity = "0";
+   document.getElementById("blck").style.opacity = "0";
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("myHead").style.width = "0px";
+    document.getElementById("Cat").style.width = "0px";
+  document.getElementById("myHead2").style.opacity = "0";
+  document.getElementById("myHead2").style.width = "0";
+   document.getElementById("b").style.opacity = "0";
+   document.getElementById("c").style.opacity = "0";
+   document.getElementById("d").style.opacity = "0";
+   document.getElementById("e").style.opacity = "0";
+   document.getElementById("f").style.opacity = "0";
+   document.getElementById("blck").style.opacity = "0";
+  document.getElementById("myHead").style.opacity = "0";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("myHead").style.width = "61%";
+  document.getElementById("myHead").style.opacity = "1";
+}
+
+function openLog() {
+    document.getElementById("myLogin").style.width = "100%";
+}
+
+function closeLog() {
+    document.getElementById("myLogin").style.width = "0";
+}
+</script>
+<link rel="icon" type="png/gif" href="icon.gif">
+<title>White Box</title>
+</head>
+<body>
+
+<div id="myLogin" class="login">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeLog()">&times;</a><br>
+  <center>
+  <div style="font-size: 30px;font-weight: bold;font-family: Comic Sans MS;color: white;">White Box</div><br><br><br>
+  <form action="submit_address.php" method="post">
+    <label for="full_name">Full Name:</label>
+    <input type="text" id="full_name" name="full_name" required><br><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required><br><br>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required><br><br>
+
+    <label for="state">State/Province:</label>
+    <input type="text" id="state" name="state" required><br><br>
+
+    <label for="postal_code">Postal/ZIP Code:</label>
+    <input type="text" id="postal_code" name="postal_code" required><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+  <br>And<br><br> <div class="button">Pay</div>
+  </center>
+</div>
+
+<div id="mySidenav" class="sidenav"><img src="navsign.png" onclick="closeNav()">
+<br><br><br><br><br><br>
+  <div class="c"><a>Home</a></div>
+  <a href="Popular.html"></a>
+  <a href="#" onclick="CatOpen()">Products</a><br><br><br><br><br><br><br><br><br><br><br><br><hr size="4" color="white">
+  <a href="about.html">The Country Farm+</a><hr size="4" color="white">
+</div>
+
+<div class="head">
+<div style="float: left;"><img src="navsign.png" onclick="openNav()"></div>White Box
+<div style="float: right;"><img src="loginsign.png" onclick="openLog()"></div>
+</div>
+
+<div class="bgimg-1">
+<div id="Cat" class="cat">
+<p id="p">
+<a class="block" id="blck">Cakes</a>
+<a class="block" id="d">A2 Milk</a>
+<a class="block" id="b">Naan Khatai</a>
+<a class="block" id="c">Cookies</a>
+<a class="block" id="f">Pie</a>
+<a class="block" id="e">More>></a>
+<a href="javascript:void(0)" class="closebtn" onclick="CatClose()">&times;</a>
+</p>
+</div>
+
+<div id="myHead" class="heading" onclick="head2open()"><p>White Box &nbsp</p></div>
+<div id="myHead2" class="heading2" onclick="head2close()"><p>Quality Throughout &nbsp</p></div>
+</div>
+
+<div class="a">
+  <p>
+    White Box Bakery: Where Every Bite Tells a Story
+    <br>
+    <hr>
+    At White Box Bakery, we're more than just a bakery; we're your trusted creators of unforgettable moments. With a passion for the art of baking, 
+    we embark on a journey to craft not just delicious treats, but memories that linger in every bite.
+    <br>
+    <hr>
+    Our Philosophy
+    <br>
+    We believe in the magic of simplicity, where a white box holds treasures that ignite joy and nostalgia.
+     Our bakers blend tradition with innovation, using the finest ingredients to produce confections that not 
+     only tantalize the taste buds but also warm the heart.
+    <br><hr>
+    Crafted with Love
+    <br>
+    Every loaf, every cake, and every pastry is crafted with love, care, and attention to detail. 
+    Our team of experienced bakers pours their heart and soul into each creation, ensuring that it not only looks delightful but also tastes divine.
+    <br><hr>
+    A Taste of Tradition
+    <br>
+    While we cherish timeless recipes passed down through generations, we're also not afraid to explore new flavors and techniques. 
+    The result? An eclectic menu that marries classic with contemporary, offering a delightful selection to satisfy every palate.
+    <br><hr>
+    Beyond Baking
+    <br>
+    At White Box Bakery, we understand that our creations are more than just baked goods; they're a part of your celebrations, 
+    your milestones, and your everyday moments. We take pride in being a part of your story, and we're committed to making it sweeter, one bite at a time.
+    <br><hr>
+    Join Us in the Journey
+    <br>
+    We invite you to explore our world of flavors, where each treat is a labor of love and a testament to our dedication to the craft. 
+    Whether you're celebrating a special occasion or simply treating yourself to a little indulgence, let White Box Bakery be your go-to 
+    destination for baked delights that make life a little sweeter.
+    <br><hr>
+    Thank you for considering us for your sweet moments. We look forward to serving you and sharing in the joy of creating memories, one white box at a time.
+    <br>
+    Welcome to White Box Bakery, where simplicity meets sweetness, and every bite tells a story.</p>
+</div>
+
+<div class="bgimg-2">
+</div>
+
+<div style="position:relative;">
+  <div class="b">
+    <img src="HPfullcover.jpg" align="left" border="2"> <div style="font-size: 30px;">Homemade Cakes: Baked with Love</div><br>
+         Indulge in the goodness of homemade cakes crafted with care and love.
+    <br>
+      **Varieties:**
+      <br>
+        - Classic Vanilla <br>
+        - Rich Chocolate <br>
+        - Zesty Lemon <br>
+        - Decadent Red Velvet <br>
+        - Seasonal Specials <br>
+        <br>
+      **Order Now and Savor the Sweet Moments!**<br>
+      <a><button onclick="addToCart('Homemade Cakes', 599)">Add to Cart</button></a><a>Buy Now</a>
+  </div>
+</div>
+
+<div class="bgimg-3">
+</div>
+
+<div style="position:relative;">
+  <div class="b">
+    <img src="LMfullcover.jpg" align="left" border="2"> <div style="font-size: 30px;">A2 Milk: Pure, Nutritious, Delicious
+    </div><br>
+    Discover the goodness of A2 Milk, sourced from cows that naturally produce milk with only the A2 beta-casein protein.  <br>
+
+    **Benefits:** <br>
+    <br>
+    <br>- **Gentle Digestion**: Ideal for those with lactose intolerance or sensitivity.
+    <br>- **Nutrient-Rich**: Packed with essential nutrients for overall health.
+    <br>
+    <br>- Substitute for regular milk in cooking, baking, or beverages.
+    <br>- Perfect for breakfast, coffee, cereal, and more.
+    <br>
+    Join the A2 Milk revolution for a healthier, tastier dairy experience.<br>
+    <a><button onclick="addToCart('A2 Milk', 300)">Add to Cart</button></a><a>Buy Now</a>
+  </div>
+</div>
+
+<div class="bgimg-4">
+</div>
+
+<div style="position:relative;">
+  <div class="b">
+    <img src="ESfullcoverdfg.jpg" align="left" border="2"> <div style="font-size: 30px;">Naan Khatai: Taste the Authenticity
+    </div><br>
+    Indulge in the flavors of India with our Naan Khatai, a beloved treat steeped in tradition. 
+    Made with aromatic spices, ghee, and a touch of sweetness, these delicate, crumbly cookies transport your taste buds to the vibrant streets of India. 
+    Perfect for pairing with your afternoon tea or as a delightful anytime snack, our Naan Khatai captures the essence of authentic Indian cuisine.<br>
+    <a><button onclick="addToCart('Naan Khatai', 150)">Add to Cart</button></a><a>Buy Now</a>
+  </div>
+</div>
+
+<div class="bgimg-5">
+<a href="Popular.html">
+<div class="caption">
+    <span class="border">
+          <!-- Shopping cart -->
+    <h2>Your Cart</h2>
+    <ul id="cart">
+        <!-- Cart items will be added here dynamically using JavaScript -->
+    </ul>
+    
+    <!-- JavaScript for cart functionality -->
+    <script>
+        var cart = [];
+
+        function addToCart(productName, price) {
+            var item = {
+                name: productName,
+                price: price
+            };
+            cart.push(item);
+            updateCart();
+        }
+
+        function updateCart() {
+            var cartList = document.getElementById('cart');
+            cartList.innerHTML = '';
+
+            var total = 0;
+            for (var i = 0; i < cart.length; i++) {
+                var item = cart[i];
+                total += item.price;
+
+                var li = document.createElement('li');
+                li.textContent = item.name + ' - Rs.' + item.price.toFixed(2);
+                cartList.appendChild(li);
+            }
+
+            var totalLi = document.createElement('li');
+            totalLi.textContent = 'Total: Rs.' + total.toFixed(2);
+            cartList.appendChild(totalLi);
+        }
+    </script>
+    </span>
+</div>
+</a>
+</div>
+
+</body>
+</html>
