@@ -1,0 +1,67 @@
+<html>
+<head>
+<style>
+body, html{
+	background-image: url("about.gif");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.h {
+	color: white;
+	background-color: black;
+	font-size: 25px;
+	font-family: Comic sans ms;
+	padding: 20px;
+}
+.h a{
+	text-decoration: none;
+	color: white;
+	transition: 0.6s;
+}
+.h a:hover{
+	color: orange;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.caption a{
+  text-decoration:none;
+}
+
+.caption span.border {
+  background-color: white;
+  color: black;
+  border:3px solid white;
+  padding: 15px 18px 18px 18px;
+  font-size: 35px;
+  transition: 1s;
+  opacity: 0.7;
+}
+
+.caption span.border:hover{
+  background-color: black;
+  border:3px solid black;
+  color: white;
+}
+
+</style>
+<title>About BooKWoRM</title>
+<link rel="icon" type="png/gif" href="icon.gif">
+</head>
+<body>
+	<center><div class="h"><b> The <a href="LIB.html">Whitebox</a></b></div></center>
+<a>
+<div class="caption">
+    <span class="border">Prepared by  <br/><br/>Rishabh Asnain Praruj Chinmay</span>
+</div>
+</a>
+</body>
+</html>
